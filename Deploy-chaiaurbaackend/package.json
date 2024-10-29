@@ -1,0 +1,16 @@
+{
+  "name": "deploy-chaiaurbaackend",
+  "version": "1.0.0",
+  "description": "this is a basic backend applicaation (Deployed)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ansh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

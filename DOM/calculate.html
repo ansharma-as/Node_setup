@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    async function populateDiv() {
+        const firstNumber = parseInt(document.getElementById("Firstnumber").value);
+        const secondNumber = parseInt(document.getElementById("SecondNumber").value);
+        
+        // const element= document.getElementById("finalSum");
+        // element.innerHTML = firstNumber + secondNumber;
+
+        const response=fetch("http://localhost:8000/sum?a="+firstNumber+"&b="+secondNumber)
+        const ans= await response.text();
+        documet.getElementById("finalSum").innerHTML =ans;
+    }
+</script>
+<body>
+    <input id="Firstnumber" type="text" placeholder="Firstnumber"> </input>
+    <input id="SecondNumber"type="text" placeholder="Lastnumber"> </input>
+
+    <button onclick="populateDiv()">calculate Sum</button>
+    <br/>
+    <div id ="finalSum"> final sum is:</div>
+</body>
+</html>
